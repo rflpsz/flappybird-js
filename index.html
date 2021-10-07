@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FlipBird</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onmousedown='return false' onselectstart='return false'>
+    
+    <div class="buttonContent" id="btnStart">
+        <div class="title">Selecione seu personagem</div>
+        <img class="players playerActive" id="player1" onclick="switchPlayer(1)" src="images/player1.jpg" alt="Player 1">
+        <img class="players" id="player2" id="player1" onclick="switchPlayer(2)" src="images/player2.jpg" alt="Player 1">
+        <br/>
+        <button onclick="javascript:start();">Iniciar Jogo</button>
+    </div>
+
+    <div class="content" id="background"></div>
+    <canvas class="content" id="canvas-panel"></canvas>
+    <canvas class="content" id="canvas-box"></canvas>
+
+    <div class="content helper-text" id="helper-text">
+        <button class="som" onclick="switchSound();this.blur();">Som: <span id="soundController">On</span></button>
+        (utilize a barra de espaço para controlar o jogo)
+    </div>
+    
+
+    <script src="index.js"></script>
+</body>
+</html>
